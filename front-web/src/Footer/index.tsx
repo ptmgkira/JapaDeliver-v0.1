@@ -1,7 +1,5 @@
 import './styles.css';
 import { ReactComponent as InstagramIcon } from './Instagram.svg';
-import { ReactComponent as GitHubIcon } from './Git.svg';   
-import { ReactComponent as FacebookIcon } from './Facebook.svg';
 
 function Footer() {
     return (
