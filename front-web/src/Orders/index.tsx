@@ -1,6 +1,5 @@
 import { toast } from 'react-toastify';
 import './styles.css';
-import { ReactComponent as Logo } from './logo.svg';
 import StepsHeaders from './StepsHeaders';
 import ProductsList from './ProductsList';
 import { useEffect, useState } from 'react';
@@ -10,7 +9,7 @@ import OrderLocation from './OrderLocation';
 import OrderSummary from './OrderSummary';
 import Footer from '../Footer';
 import { checkIsSelected } from './helpers';
-import { isTemplateTail } from 'typescript';
+
 
 
 
