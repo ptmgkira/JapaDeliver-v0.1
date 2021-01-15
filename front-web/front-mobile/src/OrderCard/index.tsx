@@ -11,6 +11,11 @@ function OrdersCard() {
        <Text style={styles.orderPrice}>R$ 50,00</Text>
         </View>
         <Text style={styles.text}>HÁ 30min.</Text>
+        <View style={styles.productsList}>
+        <Text style={styles.text}>Ramen.</Text>
+        <Text style={styles.text}>Robata.</Text>
+        <Text style={styles.text}>Sushi Atum.</Text>
+        </View>
       </View>
   );
 }
