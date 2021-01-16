@@ -7,7 +7,8 @@ export function checkIsSelected(selectedProducts: Product[], product: Product) {
 export function formatPrice(price: number){
     const formater = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
-        currency: 'BRL'
+        currency: 'BRL',
+        minimumFractionDigits: 2
     });
     return formater.format(price)
 }
