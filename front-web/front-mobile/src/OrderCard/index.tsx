@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { Order } from '../types';
 import dayjs from 'dayjs';
 import 'dayjs/locale/pt-br';
+import "intl";
+import "intl/locale-data/jsonp/pt-BR.js";
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 
@@ -17,9 +19,14 @@ function dateFromNow(date: string){
    return dayjs(date).fromNow();
 }
 
-
-
-
+export function formatPrice(price: number){
+  const formater = new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+      minimumFractionDigits: 2
+  });
+  return formater.format(price)
+}
 
 
 function OrdersCard({order}: Props) {
@@ -27,7 +34,7 @@ function OrdersCard({order}: Props) {
       <View style={styles.container}>
         <View style={styles.header}>
        <Text style={styles.orderName}>Pedido 1 {order.id} </Text>
-       <Text style={styles.orderPrice}>{order.total}</Text>
+       <Text style={styles.orderPrice}>{formatPrice(order.total)}</Text>
         </View>
         <Text style={styles.text}>{dateFromNow(order.moment)}</Text>
         <View style={styles.productsList}>
